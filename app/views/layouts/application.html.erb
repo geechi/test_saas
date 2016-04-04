@@ -24,13 +24,49 @@
       <div class="collapse navbar-collapse" id="main-nav-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Contact Us", new_contact_path %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
+  
+  <!-- Footer -->
+  <nav class="navbar navbar-inverse navbar-fixed-bottom" role="footer">
+    <div class='container'>
+      <ul class="nav navbar-nav navbar-center">
+        <li>
+            <%= link_to root_path, class: 'navbar-brand' do %>
+              Wordrick
+            <% end %>
+        </li>
+        
+        <p class="navbar-text">
+            Copyright &copy; 2016
+        </p> 
 
-<div class="container">
-  <%= yield %>
-</div>
+        <li>
+          <a href="#" class="gray-text">
+              Terms of Use
+          </a>
+        </li>
+        <li>
+          <a href="#" class="gray-text">
+              Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="#" class="gray-text">
+              Copyright
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+  
 </body>
+
 </html>
